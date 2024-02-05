@@ -4,6 +4,7 @@
     color: var(--accent-d);
     width: 100%;
     height: fit-content;
+    padding: 65px 0px 70px 40px;
 }
 
 .container::before{
@@ -15,4 +16,48 @@
     width: 200%;
     background-color: var(--secondary-color);
     z-index: -1;
+}
+
+.title{
+    visibility: hidden;
+    cursor: none;
+}
+
+.projectContainer{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.projectCollumn{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.left{
+    margin-top: 120px;
+}
+
+.project{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectTitle{
+    font-size: 2.8rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    padding-left: 0.6rem;
+}
+
+.projectText{
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    padding-left: 0.6rem;
 }

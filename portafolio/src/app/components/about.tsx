@@ -19,7 +19,7 @@ const About = () => {
             <Image
                     src="https://cdn.worldvectorlogo.com/logos/mcdonald-s-5.svg"
                     width={300}
-                    height={450}
+                    height={480}
                     alt="Picture of the author"
                     style={{background:'white'}}
                 />

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 function UseScroll(containers: any[]): [number, number[]] {
     const [scrollY, setScrollY] = useState(0);
-    let [height, setHeight] = useState([0]);
+    let [height, setHeight] = useState([100]);
     
     useEffect(() => {
         const handleScroll = () => {

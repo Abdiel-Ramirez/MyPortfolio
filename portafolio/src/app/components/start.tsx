@@ -1,4 +1,3 @@
-'use client'
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/start.module.css"
 import Image from 'next/image'
@@ -6,13 +5,13 @@ import UseScroll from "../hooks/useScroll";
 
 
 const Start = () => {
-    const [closeP, setcloseP] = useState(100);
     const [upP, setUpP] = useState(0);
     const [sizeP, setSizeP] = useState(1);
     const [shadowP, setShadow] = useState(0);
     const [showMenu, setShowMenu] = useState(-87);
     let container = useRef<HTMLInputElement>(null);
     const [scrollY, height] = UseScroll([container])
+    const [closeP, setcloseP] = useState(100);
 
     useEffect(() => {
         let percentDiff = 100;
