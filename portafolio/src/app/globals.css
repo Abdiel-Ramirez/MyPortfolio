@@ -8,8 +8,9 @@
   --dark-back: #295B84;
   --accent-1: #FAB3A0;
   --accent-2: #FFDDD2;
-  --accent-3: #FFDDD2;
+  --accent-3: #F2CC8F;
   --accent-4: #FFDEB2;
+  --accent-5: #FFA890;
   --accent-w: #F7FFF4;
   --accent-d: #336B99;
 
@@ -26,6 +27,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body { 

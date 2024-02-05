@@ -1,0 +1,48 @@
+.container{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-left: 30px;
+    margin-left: 20px;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.flexCard{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+}
+
+.aboutMe{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.faceContain{
+    width: 58%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: end;
+    padding-bottom: 200px;
+    }
+
+.titleText{
+    font-size: 4.2rem;
+    width: 100%;
+}
+
+.aboutText{
+    font-size: 1.6rem;
+}

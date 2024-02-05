@@ -7,7 +7,22 @@
     justify-content: center;
 }
 
-.card{
+.orangeBox {
+    position: fixed;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 240px;
+    height: 60px;
+    background-color: var(--accent-5);
+    right: 75px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-d);
+}
+
+.card {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +33,8 @@
 
 .titleCard {
     width: 100%;
+    flex-direction: column;
+    align-items: baseline !important;
 }
 
 .animationCard {
@@ -25,18 +42,170 @@
     overflow: hidden;
 }
 
+.headLinks {
+    height: 100%;
+}
+
+.quickLinks {
+    width: 100%;
+    color: var(--accent-d);
+    font-weight: 600;
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10%;
+}
+
+.quickLinks li {
+    display: inline;
+}
+
+.headLinks,
 .pushBack {
     position: absolute;
     width: 50vw;
     right: 0;
     margin: auto;
-    padding: 50px;
     z-index: 5;
 }
 
-.shadow{
+.pushBack {
+    padding: 50px;
+}
+
+.shadow {
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 10;
+}
+
+.titleText {
+    font-size: 6vw;
+    width: 100%;
+    margin-left: 4vw;
+}
+
+.titleAccent {
+    color: var(--accent-1);
+}
+
+.positionsListContainer {
+    width: fit-content;
+    margin-left: 4vw;
+    padding: 0 3vw;
+    height: 5.6114vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.positionsListContainer::before {
+    content: '[';
+    left: 0;
+}
+
+.positionsListContainer::after {
+    content: ']';
+    position: absolute;
+    right: 0;
+}
+
+.positionsListContainer::after,
+.positionsListContainer::before {
+    position: absolute;
+    top: 0;
+
+    color: var(--accent-w);
+    ;
+    font-size: 4.69vw;
+
+
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+.positionsList {
+    font-size: 4.69vw;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: var(--accent-2);
+    animation: rotateText 13.34s linear 0s infinite;
+    -webkit-animation: rotateText 13.34s linear 0s infinite;
+}
+
+.about {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 38vw;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    text-decoration: underline;
+}
+
+@keyframes rotateText {
+
+    0%,
+    9.48%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    12.5%,
+    21.98% {
+        transform: translate3d(0, -20%, 0);
+    }
+
+    25%,
+    34.48% {
+        transform: translate3d(0, -40%, 0);
+    }
+
+    37.5%,
+    46.98% {
+        transform: translate3d(0, -60%, 0);
+    }
+
+    50%,
+    59.48% {
+        transform: translate3d(0, -80%, 0);
+    }
+
+    62.5%,
+    71.98% {
+        transform: translate3d(0, -60%, 0);
+    }
+
+    75%,
+    84.48% {
+        transform: translate3d(0, -40%, 0);
+    }
+
+    87.5%,
+    96.98% {
+        transform: translate3d(0, -20%, 0);
+    }
+}
+
+@keyframes opacity {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }

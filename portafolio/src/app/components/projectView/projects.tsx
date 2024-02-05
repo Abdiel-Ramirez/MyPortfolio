@@ -1,8 +1,9 @@
+import styles from "../../styles/project.module.css";
 import ProjectCard from "./projectCard";
 
 const Projects = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <h2>Projects</h2>
             <ul>
                 
