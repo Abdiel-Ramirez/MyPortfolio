@@ -1,0 +1,79 @@
+.container{
+    position: relative;
+    background-color: var(--dark-back);
+    color: var(--accent-w);
+    width: 100%;
+    height: min-content;
+    padding: 65px 0px 300px 40px;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 0;
+    height: 150%;
+    width: 200%;
+    background-color: var(--dark-back);
+    z-index: -1;
+}
+
+
+.title{
+    visibility: hidden;
+    cursor: none;
+}
+
+.strengthContainer{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+
+.strength{
+    width: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 305px;
+    border: 2px solid var(--accent-d);
+
+}
+
+.topStrength{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.strengthTitle{
+    font-size: 2.56rem;
+    color: var(--accent-4);
+    width: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;   
+    text-align: center;
+}
+
+.strengthText{
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+    width: 245px;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.drawing{
+    margin-bottom: 2.2rem;
+}

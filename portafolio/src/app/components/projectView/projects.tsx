@@ -7,13 +7,13 @@ const Projects = () => {
             <h2 className={styles.title} >Projects</h2>
             <ul className={styles.projectContainer}>
                 <div className={styles.projectCollumn}>
-                <ProjectCard padd={false}/>
-                <ProjectCard padd={true}/>
-                <ProjectCard padd={false}/>
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
                 </div>
                 <div className={styles.projectCollumn + ' ' + styles.left}>
-                <ProjectCard padd={true}/>
-                <ProjectCard padd={false}/>
+                <ProjectCard/>
+                <ProjectCard/>
                 </div>
             </ul>
         </div>

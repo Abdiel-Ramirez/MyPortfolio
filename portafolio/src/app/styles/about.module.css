@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 200px;
@@ -6,7 +6,7 @@
     margin-left: 20px;
 }
 
-.container::before{
+.container::before {
     content: '';
     position: absolute;
     left: 0;
@@ -15,7 +15,7 @@
     background-color: rgba(0, 0, 0, 0.15);
 }
 
-.flexCard{
+.flexCard {
     display: flex;
     flex-wrap: nowrap;
     align-items: end;
@@ -23,26 +23,103 @@
     position: relative;
 }
 
-.aboutMe{
+.aboutMe {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.faceContain{
+.faceContain {
     width: 58%;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: end;
     padding-bottom: 200px;
-    }
+}
 
-.titleText{
+.titleText {
     font-size: 4.2rem;
     width: 100%;
 }
 
-.aboutText{
+.aboutText {
     font-size: 1.6rem;
+}
+
+
+.spinnerbox {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.solarsystem {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid var(--accent-1);
+    border-radius: 50%;
+}
+
+.earthorbit {
+    width: 305px;
+    height: 345px;
+    -webkit-animation: spin 12s linear 0s infinite;
+}
+
+.venusorbit {
+    width: 240px;
+    height: 250px;
+    -webkit-animation: spin 7.4s linear 0s infinite;
+}
+
+.mercuryorbit {
+    width: 175px;
+    height: 165px;
+    -webkit-animation: spin 3s linear 0s infinite;
+}
+
+.planet {
+    position: absolute;
+    top: -15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--accent-4);
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--accent-1);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }

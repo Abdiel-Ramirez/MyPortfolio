@@ -37,11 +37,11 @@
 }
 
 .left{
-    margin-top: 120px;
+    margin-top: 160px;
 }
 
 .project{
-    width: 450px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

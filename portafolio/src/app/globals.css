@@ -1,8 +1,4 @@
 :root {
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
   --primary-color: #55A3A8;
   --secondary-color: #F1F6EF;
   --dark-back: #295B84;
@@ -30,9 +26,27 @@ body {
   overflow-x: clip;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border-left: 0;
+  border-right: 0;
+  background-color: var(--accent-5);
+}
+
 body { 
   color: var(--accent-w);
   background: var(--primary-color);
+  height: fit-content;
+  font-family: var(--font-poppins);
+
 }
 
 a {

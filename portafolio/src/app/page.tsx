@@ -3,7 +3,7 @@ import styles from "./styles/page.module.css";
 import Start from "./components/start";
 import About from "./components/about";
 import Projects from "./components/projectView/projects";
-import Strengths from "./components/strengths";
+import Strengths from "./components/Strengths/strengths";
 import UseScroll from "./hooks/useScroll";
 import { useEffect, useRef, useState } from "react";
 
@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <main className={styles.main}>
 
-      <div ref={container1} style={{ width: '100%'}}><Start /></div>
+      <section ref={container1} style={{ width: '100%'}}><Start /></section>
       <div className={styles.pageLayout}>
         <div className={styles.navSection}>
           <div className={styles.navMain} style={{ color: color }}>
@@ -47,27 +47,20 @@ const Home = () => {
         </div>
         <div className={styles.mainSection}>
 
-          <div ref={container2} style={{ width: '100%' }} ><About /></div>
-          <div ref={container3} style={{ width: '100%' }} ><Projects /></div>
-          <div ref={container4} style={{ width: '100%' }} ><Strengths /></div>
+          <section ref={container2} style={{ width: '100%' }} ><About /></section>
+          <section ref={container3} style={{ width: '100%' }} ><Projects /></section>
+          <section ref={container4} style={{ width: '100%' }} ><Strengths /></section>
         </div>
       </div>
 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+    <footer className={styles.footerSy}>
+      Footer goes here
+      <br/><br/>
+      <br/><br/>
+      <br/><br/>
+      <br/><br/>
+      <br/><br/>
+    </footer>
 
     </main>
   );

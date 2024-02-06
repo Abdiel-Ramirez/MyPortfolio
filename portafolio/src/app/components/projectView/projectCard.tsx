@@ -1,17 +1,13 @@
 import styles from "../../styles/project.module.css";
 import Image from "next/image";
-interface props{
-    padd:boolean
-}
 
-
-const ProjectCard = ({padd}:props) => {
+const ProjectCard = () => {
     return (
         <li className={styles.project}>
             <Image
                     src="https://cdn.worldvectorlogo.com/logos/mcdonald-s-5.svg"
-                    width={450}
-                    height={600}
+                    width={400}
+                    height={580}
                     alt="Picture of the author"
                     style={{background:'white'}}
                 />
