@@ -18,7 +18,7 @@
 .flexCard {
   display: flex;
   flex-wrap: nowrap;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   position: relative;
 }
@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: end;
+  justify-content: flex-end;
   padding-bottom: 200px;
 }
 
@@ -133,6 +133,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .textcopy {
