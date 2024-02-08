@@ -17,7 +17,7 @@ const ProjectCard = ({name, pText, pImage, lText, lLink, lName}: props) => {
     if (lText !== ''){
         Link = () =>{
             return(
-            <a className={styles.link} aria-label={lName} href={lLink}>{lText}</a>
+            <a className={styles.link} aria-label={lName} href={lLink} target="_blank" rel="noopener noreferrer">{lText}</a>
         )}
     }
     
