@@ -2,6 +2,7 @@
   "name": "portafolio",
   "version": "0.1.0",
   "private": true,
+  "deploy": "gh-pages -d dist -t true",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
