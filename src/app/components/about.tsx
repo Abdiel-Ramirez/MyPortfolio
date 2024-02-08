@@ -58,7 +58,7 @@ const About = () => {
           src="Abby.png"
           width={340}
           height={480}
-          alt="Picture of the author"
+          alt="Picture of the Abdiel"
           style={{ background: 'white' }}
         />
 

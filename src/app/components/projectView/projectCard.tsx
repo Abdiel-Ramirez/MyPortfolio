@@ -27,7 +27,7 @@ const ProjectCard = ({name, pText, pImage, lText, lLink, lName}: props) => {
                     src={pImage}
                     width={400}
                     height={580}
-                    alt="Picture of the author"
+                    alt={"Picture of "+ lName}
                     style={{background:'white'}}
                 />
             <h3 className={styles.projectTitle}>{name}</h3>
