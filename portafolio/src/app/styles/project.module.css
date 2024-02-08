@@ -62,6 +62,11 @@
     padding-left: 0.6rem;
 }
 
+.link{
+    text-decoration: underline;
+    color: var(--dark-back);
+}
+
 @media screen and (max-width: 900px) {
     .container{
         padding: 0;
@@ -87,7 +92,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: start;
 
     }
 }

@@ -4,10 +4,23 @@ import Image from "next/image";
 interface props{
     name: string,
     pText: string,
-    pImage: string
+    pImage: string,
+    lText: string,
+    lLink: string,
+    lName: string
 }
 
-const ProjectCard = ({name, pText, pImage}: props) => {
+const ProjectCard = ({name, pText, pImage, lText, lLink, lName}: props) => {
+    let Link= () =>{
+        return(<></>)  
+    };
+    if (lText !== ''){
+        Link = () =>{
+            return(
+            <a className={styles.link} aria-label={lName} href={lLink}>{lText}</a>
+        )}
+    }
+    
     return (
         <li className={styles.project}>
             <Image
@@ -18,7 +31,7 @@ const ProjectCard = ({name, pText, pImage}: props) => {
                     style={{background:'white'}}
                 />
             <h3 className={styles.projectTitle}>{name}</h3>
-            <p className={styles.projectText}>{pText}</p>
+            <p className={styles.projectText}>{pText} {Link()}</p>
         </li>
     )
 }

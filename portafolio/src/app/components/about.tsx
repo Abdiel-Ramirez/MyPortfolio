@@ -15,14 +15,14 @@ const About = () => {
   <symbol id="s-text">
     <text textAnchor="middle"
           x="12%"
-          y="19%"
+          y="15%"
           className={styles.textline}
           >
       AB
     </text>
     <text textAnchor="middle"
           x="12%"
-          y="35%"
+          y="31%"
           className={styles.textline}
           >
       BY
@@ -51,17 +51,15 @@ const About = () => {
 
 
         <h2 className={styles.titleText}>About Me</h2>
-        <p className={styles.aboutText}>Engineering student in Computational Technology at Tecnológico de Monterrey passionate about developing attractive and easy-to-use software applications. Excellent problem-solving skills and ability to perform well in a team, either as a developer or a leader. I am looking to help your company develop its product as a software developer, as well as grow and develop my own skills as a coder. </p>
+        <p className={styles.aboutText}>I am Abdiel, a non-binary Computer Science student at Tecnológico de Monterrey, set to graduate in July 2024. Passionate about developing attractive and easy-to-use software applications, I possess excellent problem-solving skills and a strong ability to thrive in team environments. I am eager to contribute to your company's product development as a software developer and am committed to furthering my growth and skills in coding. Feel free to call me Abdiel or Abby.</p>
       </div>
       <div className={styles.faceContain}>
         <Image
-          src="/test.png"
-          width={342}
+          src="/Abby.png"
+          width={340}
           height={480}
           alt="Picture of the author"
           style={{ background: 'white' }}
-
-          objectFit="cover"
         />
 
         <div className={styles.spinnerbox}>
