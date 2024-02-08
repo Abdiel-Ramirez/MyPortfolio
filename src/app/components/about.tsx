@@ -55,7 +55,7 @@ const About = () => {
       </div>
       <div className={styles.faceContain}>
         <Image
-          src="/MyPortafolio/Abby.png"
+          src="https://abdiel-ramirez.github.io/MyPortafolio/Abby.png"
           width={340}
           height={480}
           alt="Picture of the author"
