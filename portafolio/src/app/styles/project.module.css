@@ -1,0 +1,93 @@
+.container{
+    position: relative;
+    background-color: var(--secondary-color);
+    color: var(--accent-d);
+    width: 100%;
+    height: fit-content;
+    padding: 65px 0px 70px 40px;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 0;
+    height: 100%;
+    width: 200%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+.title{
+    visibility: hidden;
+    cursor: none;
+}
+
+.projectContainer{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.projectCollumn{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.left{
+    margin-top: 160px;
+}
+
+.project{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectTitle{
+    font-size: 2.8rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    padding-left: 0.6rem;
+}
+
+.projectText{
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    padding-left: 0.6rem;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        padding: 0;
+        padding-bottom: 100px;
+    }
+    .projectContainer{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .projectContainer{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projectCollumn{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

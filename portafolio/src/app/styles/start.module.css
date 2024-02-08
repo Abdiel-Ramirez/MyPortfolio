@@ -1,0 +1,343 @@
+.start {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.titleCard {
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline ;
+}
+
+.animationCard {
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.headLinks {
+    height: 100%;
+    z-index: 999;
+}
+
+.quickLinks {
+    width: 100%;
+    color: var(--accent-d);
+    font-weight: 600;
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10%;
+    position: relative;
+}
+
+.quickLinks li {
+    display: inline;
+}
+
+.headLinks,
+.pushBack {
+    position: absolute;
+    width: 50vw;
+    right: 0;
+    margin: auto;
+}
+
+.pushBack {
+    padding: 50px;
+    z-index: 5;
+
+}
+
+.shadow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.titleText {
+    font-size: 6vw;
+    width: 100%;
+    margin-left: 4vw;
+}
+
+.titleAccent {
+    color: var(--accent-1);
+}
+
+.positionsListContainer {
+    width: fit-content;
+    margin-left: 4vw;
+    padding: 0 3vw;
+    height: 5.6114vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.positionsListContainer::before {
+    content: '[';
+    left: 0;
+}
+
+.positionsListContainer::after {
+    content: ']';
+    position: absolute;
+    right: 0;
+}
+
+.positionsListContainer::after,
+.positionsListContainer::before {
+    position: absolute;
+    top: 0;
+
+    color: var(--accent-w);
+    ;
+    font-size: 4.69vw;
+
+
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+.positionsList {
+    font-size: 4.69vw;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: var(--accent-2);
+    animation: rotateText 13.34s linear 0s infinite;
+    -webkit-animation: rotateText 13.34s linear 0s infinite;
+}
+
+.about {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 38vw;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    text-decoration: underline;
+    z-index: 99;
+}
+
+@keyframes rotateText {
+
+    0%,
+    9.48%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    12.5%,
+    21.98% {
+        transform: translate3d(0, -20%, 0);
+    }
+
+    25%,
+    34.48% {
+        transform: translate3d(0, -40%, 0);
+    }
+
+    37.5%,
+    46.98% {
+        transform: translate3d(0, -60%, 0);
+    }
+
+    50%,
+    59.48% {
+        transform: translate3d(0, -80%, 0);
+    }
+
+    62.5%,
+    71.98% {
+        transform: translate3d(0, -60%, 0);
+    }
+
+    75%,
+    84.48% {
+        transform: translate3d(0, -40%, 0);
+    }
+
+    87.5%,
+    96.98% {
+        transform: translate3d(0, -20%, 0);
+    }
+}
+
+@keyframes opacity {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  .spinnerbox {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  /* SPINNING CIRCLE */
+  
+  .leoborder1 {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,249,220,1) 100%);
+    animation: spin3D 2.8s linear 0s infinite;
+    z-index: 0;
+  }
+  
+  .leocore1 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffd2f0bd;
+    border-radius: 50%;
+  }
+  
+  .leoborder2 {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(251, 91, 83, 0.1) 33%, rgba(251, 91, 83, 1) 100%);
+    animation: spin3D 3.2s linear 0s infinite;
+    z-index: 1;
+
+  }
+  
+  .leocore2 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffd2f0bd;
+    border-radius: 50%;
+  }
+  
+  
+  .leo {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+  }
+  
+  .blueorbit {
+      width: 418px;
+      height: 418px;
+    border: 3px solid #ffade9a5;
+    -webkit-animation: spin3D 4.2s linear .2s infinite;
+    z-index: 2;
+
+  }
+  
+  .greenorbit {
+      width: 297px;
+      height: 297px;
+    border: 3px solid #ffcb83;
+    -webkit-animation: spin3D 3s linear 0s infinite;
+    z-index: 2;
+  }
+  
+  .redorbit {
+      width: 178px;
+      height: 178px;
+    border: 3px solid #fbb7b7a0;
+    -webkit-animation: spin3D 1.5s linear 0s infinite;
+    z-index: 2;
+  }
+  
+  .whiteorbit {
+      width: 72px;
+      height: 72px;
+    border: 5px solid #f1eef052;
+    -webkit-animation: spin3D 11s linear 0s infinite;
+    z-index: 2;
+
+  }
+
+  .downBlob{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .animationCard{
+        display: none;
+    }
+    .titleCard{
+        align-items: center;
+        justify-content: center;
+    }
+    .titleText{
+        margin: 0;
+        text-align: center;
+        font-size: 12vw;
+    }
+    .positionsListContainer{
+        height: 11.2228vw;
+        padding: 0 6vw;
+    }
+    .positionsList{
+        font-size: 9.38vw;
+    }
+    .positionsListContainer::before, .positionsListContainer::after{
+        font-size: 9.38vw;
+    }
+    .about{
+        font-size: 6vw;
+        width: 100%;
+    }
+
+  }

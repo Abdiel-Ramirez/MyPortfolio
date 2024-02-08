@@ -1,0 +1,75 @@
+.stengthIcon{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-self: center;
+  }
+
+
+li .strength1{
+    transition: 1.2s ease-in-out;
+    scale: 1;
+}
+
+li:hover .strength1{
+    transition: 1.5s cubic-bezier(.57,-0.01,.34,3.5);
+    scale: 1.15;
+}
+
+
+li .strength2{
+    transition: 2.4s ease-in-out;
+    rotate: 0DEG;
+}
+
+li:hover .strength2{
+    transition: 1.7s ease-in-out;
+    rotate: -520DEG;
+    transform: translate(1px, 0);
+}
+
+li .strength3{
+    animation: shake 1s linear 0s;
+    animation-iteration-count: 2;
+}
+
+li:hover .strength3{
+    animation-iteration-count: infinite;
+}
+
+
+li .strength4{
+    transition: transform 2.4s ease-in-out;
+    transform: rotate3d();
+}
+
+li:hover .strength4{
+    transform: rotate3d(1, 1, 1, 545deg);
+
+
+}
+
+@keyframes shake {
+    0%{
+        rotate: 0DEG;
+    }
+    15%{
+        rotate: 25DEG;
+    }
+    35%{
+        rotate: 25DEG;
+    }
+    50%{
+        rotate: 0DEG;
+    }
+    65%{
+        rotate: -25DEG;
+    }
+    85%{
+        rotate: -25DEG;
+    }
+    100%{
+        rotate: 0DEG;
+    }
+    
+}

@@ -1,0 +1,238 @@
+.container {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.flexCard {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+
+.aboutMe {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faceContain {
+  width: 58%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: end;
+  padding-bottom: 200px;
+}
+
+.titleText {
+  font-size: 4.2rem;
+  width: 100%;
+}
+
+.aboutText {
+  font-size: 1.6rem;
+}
+
+
+.spinnerbox {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.solarsystem {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid var(--accent-1);
+  border-radius: 50%;
+}
+
+.earthorbit {
+  width: 310px;
+  height: 335px;
+  -webkit-animation: spin 12s linear 0s infinite;
+}
+
+.venusorbit {
+  width: 240px;
+  height: 250px;
+  -webkit-animation: spin 7.4s linear 0s infinite;
+}
+
+.mercuryorbit {
+  width: 175px;
+  height: 165px;
+  -webkit-animation: spin 3s linear 0s infinite;
+}
+
+.planet {
+  position: absolute;
+  top: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--accent-4);
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--accent-1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.textline {
+  font-size: 0.5em;
+}
+
+.abby {
+  font: 11.5em/1 Arial;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.textcopy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 29.75%;
+  stroke-width: 6px;
+  -webkit-animation: stroke-offset 10s infinite linear;
+  animation: stroke-offset 10s infinite linear;
+}
+
+.textcopy:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+
+.textcopy:nth-child(2) {
+  stroke: var(--accent-5);
+  stroke-dashoffset: 14%;
+}
+
+.textcopy:nth-child(3) {
+  stroke: var(--accent-4);
+  stroke-dashoffset: 21%;
+}
+
+.textcopy:nth-child(4) {
+  stroke: var(--accent-2);
+  stroke-dashoffset: 28%;
+}
+
+.textcopy:nth-child(5) {
+  stroke: var(--accent-d);
+  stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+  }
+
+  .abby {
+    display: none;
+  }
+
+  .spinnerbox {
+    display: none;
+  }
+
+  .faceContain {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container::before {
+    display: none;
+  }
+
+  .flexCard{
+    align-items: center;
+  }
+
+  .aboutMe{
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+}
+
+
+@media screen and (min-width: 2000px) {
+  .abby{
+    display: none;
+  }
+  .titleText{
+    font-size: 12rem;
+  }
+  .aboutText{
+    font-size: 3.2rem;
+  }
+  .faceContain{
+    scale: 1.2;
+  }
+}
