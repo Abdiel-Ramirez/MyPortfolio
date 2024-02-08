@@ -3,11 +3,12 @@ import Image from "next/image";
 
 interface props {
     titleS: string,
-    textS: string
-    textS2: string
+    textS: string,
+    textS2: string,
+    drawing: () => JSX.Element
 }
 
-const Strength = ({titleS, textS, textS2}:props) => {
+const Strength = ({titleS, textS, textS2, drawing}:props) => {
     return (
         <li className={styles.strength}>
             <div className={styles.topStrength}>
@@ -15,12 +16,7 @@ const Strength = ({titleS, textS, textS2}:props) => {
                 <p className={styles.strengthText}>{textS} <br/> {textS2} </p>
             </div>
             <div className={styles.drawing}>
-            <Image
-                src="https://cdn.worldvectorlogo.com/logos/mcdonald-s-5.svg"
-                width={180}
-                height={180}
-                alt="Picture of the author"
-            />
+            {drawing()}
             </div>
         </li>
     )

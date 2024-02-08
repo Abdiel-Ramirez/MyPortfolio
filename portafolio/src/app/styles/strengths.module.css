@@ -4,7 +4,7 @@
     color: var(--accent-w);
     width: 100%;
     height: min-content;
-    padding: 65px 0px 300px 40px;
+    padding: 65px 0px 160px 0px;
 }
 
 .container::before{
@@ -29,6 +29,7 @@
     display: flex;
     width: 100%;
     justify-content: end;
+    flex-wrap: wrap;
 }
 
 
@@ -76,4 +77,24 @@
 
 .drawing{
     margin-bottom: 2.2rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    .strengthContainer{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .strength{
+        border: none;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .strengthContainer{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }

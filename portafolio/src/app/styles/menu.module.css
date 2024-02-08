@@ -1,0 +1,97 @@
+.orangeBox {
+    position: fixed;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 240px;
+    height: 60px;
+    background-color: var(--accent-5);
+    right: 75px;
+    z-index: 999;
+    color: var(--accent-d);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 1;
+    box-shadow: 0px 20px 34px 2px rgba(0, 0, 0, 0.1);
+    transition: top 0s  linear, height 0.5s ease-in-out, box-shadow 0.5s, opacity 0.2s;
+}
+
+.orangeBox:hover{
+    height: 240px;
+    box-shadow: 0px 20px 34px 2px rgba(0, 0, 0, 0.20);
+
+}
+
+.upDControl{
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.orangeBox:hover .upDControl{
+    top: -60px;
+}
+
+
+.menuText, .menuList li{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menuList li{
+    transition: background-color 0.2s ease ;
+}
+
+.menuList li:hover{
+    background-color: var(--accent-4);
+
+}
+
+.menuList li:active{
+    background-color: var(--accent-3);
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .orangeBox {
+        right: 1%;
+        transform: translate(0px , -9px);
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .orangeBox {
+        font-size: 2.2rem;
+        width: 360px;
+        height: 90px;
+        transform: translate(50px, -18px);
+    }
+    
+    .orangeBox:hover{
+        height: 360px;
+    
+    }
+    
+    .upDControl{
+        width: 360px;
+    }
+    
+    .orangeBox:hover .upDControl{
+        top: -90px;
+    }
+    
+    
+    .menuText, .menuList li{
+        height: 90px;
+    }
+    
+  }

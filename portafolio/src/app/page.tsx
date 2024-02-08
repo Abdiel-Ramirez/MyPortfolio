@@ -5,6 +5,7 @@ import About from "./components/about";
 import Projects from "./components/projectView/projects";
 import Strengths from "./components/Strengths/strengths";
 import UseScroll from "./hooks/useScroll";
+import Footer from "./components/footer";
 import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
@@ -19,8 +20,8 @@ const Home = () => {
   const [color, setColor] = useState('var(--accent-w)');
 
   useEffect(() => {
-    if(height.length > 1){
-      if(scrollY > height[0] + height[1] - 130) {
+    if (height.length > 1) {
+      if (scrollY > height[0] + height[1] - 130) {
         setColor('var(--accent-3)');
 
       } else {
@@ -36,31 +37,23 @@ const Home = () => {
   return (
     <main className={styles.main}>
 
-      <section ref={container1} style={{ width: '100%'}}><Start /></section>
+      <section id="Start" ref={container1} style={{ width: '100%' }}><Start /></section>
       <div className={styles.pageLayout}>
         <div className={styles.navSection}>
           <div className={styles.navMain} style={{ color: color }}>
-            <div className={styles.sideLimit} style={{height:navh1}}><div className={styles.sideText}>About Me</div></div>
-            <div className={styles.sideLimit} style={{height:navh2}}><div className={styles.sideText}>Projects</div></div>
-            <div className={styles.sideLimit} style={{height:navh3}}><div className={styles.sideText}>Strengths</div></div>
+            <div className={styles.sideLimit} style={{ height: navh1 }}><div className={styles.sideText}>About Me</div></div>
+            <div className={styles.sideLimit} style={{ height: navh2 }}><div className={styles.sideText}>Projects</div></div>
+            <div className={styles.sideLimit} style={{ height: navh3 }}><div className={styles.sideText}>Strengths</div></div>
           </div>
         </div>
         <div className={styles.mainSection}>
 
-          <section ref={container2} style={{ width: '100%' }} ><About /></section>
-          <section ref={container3} style={{ width: '100%' }} ><Projects /></section>
-          <section ref={container4} style={{ width: '100%' }} ><Strengths /></section>
+          <section id="About" ref={container2} style={{ width: '100%' }} ><About /></section>
+          <section id="Projects" ref={container3} style={{ width: '100%' }} ><Projects /></section>
+          <section id="Strengths" ref={container4} style={{ width: '100%' }} ><Strengths /></section>
         </div>
       </div>
-
-    <footer className={styles.footerSy}>
-      Footer goes here
-      <br/><br/>
-      <br/><br/>
-      <br/><br/>
-      <br/><br/>
-      <br/><br/>
-    </footer>
+      <section id="Contact" style={{ width: '100%' }}><Footer/></section>
 
     </main>
   );

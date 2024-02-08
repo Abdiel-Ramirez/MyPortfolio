@@ -7,20 +7,6 @@
     justify-content: center;
 }
 
-.orangeBox {
-    position: fixed;
-    font-size: 1.5rem;
-    font-weight: 600;
-    width: 240px;
-    height: 60px;
-    background-color: var(--accent-5);
-    right: 75px;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--accent-d);
-}
 
 .card {
     height: 100%;
@@ -34,7 +20,7 @@
 .titleCard {
     width: 100%;
     flex-direction: column;
-    align-items: baseline !important;
+    align-items: baseline ;
 }
 
 .animationCard {
@@ -44,6 +30,7 @@
 
 .headLinks {
     height: 100%;
+    z-index: 999;
 }
 
 .quickLinks {
@@ -58,6 +45,7 @@
     align-items: baseline;
     justify-content: center;
     gap: 10%;
+    position: relative;
 }
 
 .quickLinks li {
@@ -70,11 +58,12 @@
     width: 50vw;
     right: 0;
     margin: auto;
-    z-index: 5;
 }
 
 .pushBack {
     padding: 50px;
+    z-index: 5;
+
 }
 
 .shadow {
@@ -152,6 +141,7 @@
     text-align: center;
     left: 0;
     text-decoration: underline;
+    z-index: 99;
 }
 
 @keyframes rotateText {
@@ -322,3 +312,32 @@
     height: 500px;
   }
   
+  @media screen and (max-width: 900px) {
+    .animationCard{
+        display: none;
+    }
+    .titleCard{
+        align-items: center;
+        justify-content: center;
+    }
+    .titleText{
+        margin: 0;
+        text-align: center;
+        font-size: 12vw;
+    }
+    .positionsListContainer{
+        height: 11.2228vw;
+        padding: 0 6vw;
+    }
+    .positionsList{
+        font-size: 9.38vw;
+    }
+    .positionsListContainer::before, .positionsListContainer::after{
+        font-size: 9.38vw;
+    }
+    .about{
+        font-size: 6vw;
+        width: 100%;
+    }
+
+  }

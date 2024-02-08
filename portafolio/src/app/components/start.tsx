@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/start.module.css"
-import Image from 'next/image'
 import UseScroll from "../hooks/useScroll";
-
+import Menu from "./menu";
 
 const Start = () => {
     const [upP, setUpP] = useState(0);
@@ -12,6 +11,7 @@ const Start = () => {
     let container = useRef<HTMLInputElement>(null);
     const [scrollY, height] = UseScroll([container])
     const [closeP, setcloseP] = useState(100);
+    const [opacityM, setOpacityM] = useState(0);
 
     useEffect(() => {
         let percentDiff = 100;
@@ -42,6 +42,12 @@ const Start = () => {
             menu = -112 + (shadow * 4) + 25;
         }
 
+        if(menu <= -85){
+            setOpacityM(0)
+        }else{
+            setOpacityM(1)
+        }
+
         setShowMenu(menu)
         setcloseP(percentDiff)
         setSizeP(sizeScale)
@@ -52,7 +58,7 @@ const Start = () => {
 
     return (
         <div className={styles.start} ref={container}>
-            <div className={styles.orangeBox} style={{ top: showMenu + 'px' }}>Menu</div>
+            <Menu showMenu={showMenu} opacityM={opacityM} />
             <div className={styles.card + " " + styles.titleCard}>
                 <h1 className={styles.titleText}> Hi I’m <span className={styles.titleAccent}>Abby </span> </h1>
                 <div className={styles.positionsListContainer}>
@@ -65,16 +71,16 @@ const Start = () => {
                     </ul>
                 </div>
 
-                <a className={styles.about}>More about me</a>
+                <a aria-label="About" href="#About" className={styles.about}>More about me</a>
             </div>
             <div className={styles.card + " " + styles.animationCard} style={{ width: closeP + "%" }}>
                 <div className={styles.shadow} style={{ boxShadow: "36px -13px 34px 2px rgb(0 0 0 / " + shadowP + "%) inset" }} />
                 <div className={styles.headLinks}>
                     <nav>
                         <ul className={styles.quickLinks}>
-                            <li>About Me</li>
-                            <li>Projects</li>
-                            <li>Strengths</li>
+                            <li><a aria-label="About" href="#About">About Me</a></li>
+                            <li><a aria-label="Projects" href="#Projects">Projects</a></li>
+                            <li><a aria-label="Strengths" href="#Strengths">Strengths</a></li>
                         </ul>
                     </nav>
 
