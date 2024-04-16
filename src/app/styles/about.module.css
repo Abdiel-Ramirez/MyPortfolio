@@ -166,7 +166,7 @@
 }
 
 .textcopy:nth-child(5) {
-  stroke: var(--accent-d);
+  stroke: white;
   stroke-dashoffset: 35%;
 }
 
