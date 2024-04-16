@@ -1,16 +1,14 @@
 :root {
   --primary-color: #295557;
-  --secondary-color: #F1F6EF;
-  --dark-back: #2f817e;
-  --accent-1: #FAB3A0;
-  --accent-2: #FFDDD2;
-  --accent-3: #D4B190;
-  --accent-4: #FFDEB2;
-  --accent-5: #FFA890;
-  --accent-w: #F7FFF4;
-  --accent-d: #176d70;
-
-
+  --secondary-color: #f1f6ef;
+  --dark-back: #1b4862;
+  --accent-1: #fab3a0;
+  --accent-2: #ffddd2;
+  --accent-3: #d4b190;
+  --accent-4: #ffdeb2;
+  --accent-5: #ffa890;
+  --accent-w: #f7fff4;
+  --accent-d: #0e4065;
 }
 
 * {
